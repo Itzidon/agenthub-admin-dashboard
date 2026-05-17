@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,6 +11,8 @@
     tailwind.config = {
       darkMode: "class",
     };
+
+    document.documentElement.style.scrollBehavior = "smooth";
   </script>
 </head>
 
@@ -26,29 +28,49 @@
       </h2>
 
       <nav class="space-y-3">
-        <a href="#dashboard" class="block rounded bg-blue-600 px-4 py-2">
+
+        <a
+          href="#dashboard"
+          class="block rounded bg-blue-600 px-4 py-2"
+        >
           Dashboard
         </a>
 
-        <a href="#usuarios" class="block rounded px-4 py-2 hover:bg-gray-700">
+        <a
+          href="#usuarios"
+          class="block rounded px-4 py-2 hover:bg-gray-700"
+        >
           Usuarios
         </a>
 
-        <a href="#agentes" class="block rounded px-4 py-2 hover:bg-gray-700">
+        <a
+          href="#agentes"
+          class="block rounded px-4 py-2 hover:bg-gray-700"
+        >
           Agentes
         </a>
 
-        <a href="#skills" class="block rounded px-4 py-2 hover:bg-gray-700">
+        <a
+          href="#skills"
+          class="block rounded px-4 py-2 hover:bg-gray-700"
+        >
           Skills
         </a>
 
-        <a href="#contratos" class="block rounded px-4 py-2 hover:bg-gray-700">
+        <a
+          href="#contratos"
+          class="block rounded px-4 py-2 hover:bg-gray-700"
+        >
           Contrataciones
         </a>
 
-        <a href="#errores" class="block rounded px-4 py-2 hover:bg-gray-700">
+        <a
+          href="#errores"
+          class="block rounded px-4 py-2 hover:bg-gray-700"
+        >
           Log errores
         </a>
+
       </nav>
 
     </aside>
@@ -56,10 +78,11 @@
     <!-- MAIN -->
     <main class="flex-1 space-y-12 p-8 md:ml-64">
 
-      <!-- HEADER -->
+      <!-- TOPBAR -->
       <header class="flex items-center justify-between">
 
         <div>
+
           <h1 class="text-4xl font-bold">
             Panel de Administración
           </h1>
@@ -67,6 +90,7 @@
           <p class="text-gray-500 dark:text-gray-400">
             Bienvenida, Itziar
           </p>
+
         </div>
 
         <button
@@ -157,6 +181,7 @@
           <tbody>
 
             <tr class="border-b dark:border-gray-700">
+
               <td class="p-3">Ana López</td>
               <td class="p-3">ana@empresa.com</td>
               <td class="p-3">Pro</td>
@@ -176,13 +201,171 @@
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
 
                   <button
-                    onclick="openModal('Usuario: Ana López · Plan Pro · Estado activo')"
-                    class="block px-4 py-2"
+                    onclick="openModal('Usuario: Ana López · Plan Pro · Empresa NovaTech · 3 agentes contratados')"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
                   >
                     Ver detalle
                   </button>
 
-                  <button class="block px-4 py-2 text-red-500">
+                  <button
+                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Eliminar
+                  </button>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr class="border-b dark:border-gray-700">
+
+              <td class="p-3">Carlos Pérez</td>
+              <td class="p-3">carlos@startup.io</td>
+              <td class="p-3">Business</td>
+
+              <td class="p-3">
+                <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">
+                  Activo
+                </span>
+              </td>
+
+              <td class="relative p-3">
+
+                <button class="dropdown-btn text-xl">
+                  ⋮
+                </button>
+
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+
+                  <button
+                    onclick="openModal('Usuario: Carlos Pérez · Plan Business · Empresa BlueSoft')"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Ver detalle
+                  </button>
+
+                  <button
+                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Eliminar
+                  </button>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr class="border-b dark:border-gray-700">
+
+              <td class="p-3">Lucía Martín</td>
+              <td class="p-3">lucia@corp.com</td>
+              <td class="p-3">Free</td>
+
+              <td class="p-3">
+                <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-700">
+                  Pendiente
+                </span>
+              </td>
+
+              <td class="relative p-3">
+
+                <button class="dropdown-btn text-xl">
+                  ⋮
+                </button>
+
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+
+                  <button
+                    onclick="openModal('Usuario: Lucía Martín · Plan Free · Estado pendiente')"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Ver detalle
+                  </button>
+
+                  <button
+                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Eliminar
+                  </button>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr class="border-b dark:border-gray-700">
+
+              <td class="p-3">Diego Ruiz</td>
+              <td class="p-3">diego@agency.com</td>
+              <td class="p-3">Pro</td>
+
+              <td class="p-3">
+                <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">
+                  Suspendido
+                </span>
+              </td>
+
+              <td class="relative p-3">
+
+                <button class="dropdown-btn text-xl">
+                  ⋮
+                </button>
+
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+
+                  <button
+                    onclick="openModal('Usuario: Diego Ruiz · Cuenta suspendida')"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Ver detalle
+                  </button>
+
+                  <button
+                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Eliminar
+                  </button>
+
+                </div>
+
+              </td>
+
+            </tr>
+
+            <tr>
+
+              <td class="p-3">Marta Gil</td>
+              <td class="p-3">marta@tech.es</td>
+              <td class="p-3">Enterprise</td>
+
+              <td class="p-3">
+                <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">
+                  Activo
+                </span>
+              </td>
+
+              <td class="relative p-3">
+
+                <button class="dropdown-btn text-xl">
+                  ⋮
+                </button>
+
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+
+                  <button
+                    onclick="openModal('Usuario: Marta Gil · Enterprise · FinLab')"
+                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
+                    Ver detalle
+                  </button>
+
+                  <button
+                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  >
                     Eliminar
                   </button>
 
@@ -237,12 +420,10 @@
                   ⋮
                 </button>
 
-                <div
-                  class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700"
-                >
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
 
                   <button
-                    onclick="openModal('Configurar SalesBot: prompt de sistema editable')"
+                    onclick="openModal('Configurar SalesBot: prompt editable CRM.')"
                     class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600"
                   >
                     Configurar
@@ -264,10 +445,31 @@
               Ver skills
             </button>
 
-            <div
-              class="collapse mt-3 hidden rounded bg-gray-100 p-3 transition-all duration-300 dark:bg-gray-700"
-            >
+            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">
               Navegación web, CRM, Calendario
+            </div>
+
+          </article>
+
+          <article class="rounded-lg border p-4 dark:border-gray-700">
+
+            <h3 class="text-xl font-bold">
+              SupportAI
+            </h3>
+
+            <p>
+              Carlos Pérez ·
+              <span class="text-red-500">
+                Fallando
+              </span>
+            </p>
+
+            <button class="collapse-btn mt-4 text-blue-500">
+              Ver skills
+            </button>
+
+            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">
+              Chat soporte, PDFs, Base conocimiento
             </div>
 
           </article>
@@ -286,7 +488,7 @@
           Skills
         </h2>
 
-        <p class="mb-6 text-gray-500">
+        <p class="mb-6 text-gray-500 dark:text-gray-400">
           Una skill es una capacidad que puede adjuntarse a un agente IA.
         </p>
 
@@ -306,12 +508,21 @@
               12 agentes
             </p>
 
-            <button
-              onclick="openModal('Skill Navegación web: permite consultar páginas externas')"
-              class="mt-2 block text-blue-500"
-            >
-              Ver detalle
-            </button>
+          </div>
+
+          <div class="rounded-lg border p-4 dark:border-gray-700">
+
+            <h3 class="font-bold">
+              Lectura documentos
+            </h3>
+
+            <p>
+              Procesa PDFs y archivos.
+            </p>
+
+            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">
+              8 agentes
+            </p>
 
           </div>
 
@@ -332,35 +543,28 @@
         <table class="w-full text-left">
 
           <thead>
+
             <tr class="border-b dark:border-gray-700">
+
               <th class="p-3">Cliente</th>
               <th class="p-3">Agente</th>
               <th class="p-3">Skills</th>
               <th class="p-3">Fechas</th>
               <th class="p-3">Importe</th>
-              <th class="p-3">Acciones</th>
+
             </tr>
+
           </thead>
 
           <tbody>
 
             <tr>
+
               <td class="p-3">NovaTech</td>
               <td class="p-3">SalesBot</td>
               <td class="p-3">CRM, Web</td>
               <td class="p-3">01/05 - 31/05</td>
               <td class="p-3">950 €</td>
-
-              <td class="p-3">
-
-                <button
-                  onclick="openModal('Contrato NovaTech: CRM 450 €, Web 500 €. Total 950 €')"
-                  class="text-blue-500"
-                >
-                  Ver detalle
-                </button>
-
-              </td>
 
             </tr>
 
@@ -392,19 +596,17 @@
 
             · Timeout API
 
-            <button
-              onclick="openModal('Traza completa: Timeout API en SupportAI')"
-              class="ml-4 text-blue-500"
-            >
-              Ver detalle
-            </button>
+          </div>
 
-            <button
-              onclick="this.parentElement.classList.add('opacity-40')"
-              class="ml-2 text-green-500"
-            >
-              Marcar como resuelto
-            </button>
+          <div class="rounded border p-4 dark:border-gray-700">
+
+            2026-05-13 · SalesBot ·
+
+            <span class="rounded bg-yellow-100 px-2 py-1 text-yellow-700">
+              Media
+            </span>
+
+            · Error CRM
 
           </div>
 
@@ -469,38 +671,46 @@ Prompt editable del agente...
       });
 
     // DROPDOWNS
-    document.querySelectorAll(".dropdown-btn").forEach((button) => {
+    document
+      .querySelectorAll(".dropdown-btn")
+      .forEach((button) => {
 
-      button.addEventListener("click", (event) => {
+        button.addEventListener("click", (event) => {
 
-        event.stopPropagation();
+          event.stopPropagation();
 
-        document.querySelectorAll(".dropdown").forEach((menu) => {
-          menu.classList.add("hidden");
+          document
+            .querySelectorAll(".dropdown")
+            .forEach((menu) => {
+              menu.classList.add("hidden");
+            });
+
+          button.nextElementSibling.classList.toggle("hidden");
+
         });
 
-        button.nextElementSibling.classList.toggle("hidden");
-
       });
-
-    });
 
     document.addEventListener("click", () => {
 
-      document.querySelectorAll(".dropdown").forEach((menu) => {
-        menu.classList.add("hidden");
-      });
+      document
+        .querySelectorAll(".dropdown")
+        .forEach((menu) => {
+          menu.classList.add("hidden");
+        });
 
     });
 
     // COLLAPSE
-    document.querySelectorAll(".collapse-btn").forEach((button) => {
+    document
+      .querySelectorAll(".collapse-btn")
+      .forEach((button) => {
 
-      button.addEventListener("click", () => {
-        button.nextElementSibling.classList.toggle("hidden");
+        button.addEventListener("click", () => {
+          button.nextElementSibling.classList.toggle("hidden");
+        });
+
       });
-
-    });
 
     // MODAL
     function openModal(text) {
@@ -523,13 +733,15 @@ Prompt editable del agente...
 
     }
 
-    document.getElementById("modal").addEventListener("click", (event) => {
+    document
+      .getElementById("modal")
+      .addEventListener("click", (event) => {
 
-      if (event.target.id === "modal") {
-        closeModal();
-      }
+        if (event.target.id === "modal") {
+          closeModal();
+        }
 
-    });
+      });
 
     // ESC
     document.addEventListener("keydown", (event) => {
