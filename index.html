@@ -4,113 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AgentHub Admin Dashboard</title>
-
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
-    tailwind.config = {
-      darkMode: "class",
-    };
-
+    tailwind.config = { darkMode: "class" };
     document.documentElement.style.scrollBehavior = "smooth";
   </script>
 </head>
 
 <body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white">
-
   <div class="flex min-h-screen">
 
-    <!-- SIDEBAR -->
     <aside class="fixed hidden h-screen w-64 bg-gray-800 p-6 text-white md:block">
-
-      <h2 class="mb-10 text-2xl font-bold">
-        🤖 AgentHub
-      </h2>
-
+      <h2 class="mb-10 text-2xl font-bold">🤖 AgentHub</h2>
       <nav class="space-y-3">
-
-        <a
-          href="#dashboard"
-          class="block rounded bg-blue-600 px-4 py-2"
-        >
-          Dashboard
-        </a>
-
-        <a
-          href="#usuarios"
-          class="block rounded px-4 py-2 hover:bg-gray-700"
-        >
-          Usuarios
-        </a>
-
-        <a
-          href="#agentes"
-          class="block rounded px-4 py-2 hover:bg-gray-700"
-        >
-          Agentes
-        </a>
-
-        <a
-          href="#skills"
-          class="block rounded px-4 py-2 hover:bg-gray-700"
-        >
-          Skills
-        </a>
-
-        <a
-          href="#contratos"
-          class="block rounded px-4 py-2 hover:bg-gray-700"
-        >
-          Contrataciones
-        </a>
-
-        <a
-          href="#errores"
-          class="block rounded px-4 py-2 hover:bg-gray-700"
-        >
-          Log errores
-        </a>
-
+        <a href="#dashboard" class="block rounded bg-blue-600 px-4 py-2">Dashboard</a>
+        <a href="#usuarios" class="block rounded px-4 py-2 hover:bg-gray-700">Usuarios</a>
+        <a href="#agentes" class="block rounded px-4 py-2 hover:bg-gray-700">Agentes</a>
+        <a href="#skills" class="block rounded px-4 py-2 hover:bg-gray-700">Skills</a>
+        <a href="#contratos" class="block rounded px-4 py-2 hover:bg-gray-700">Contrataciones</a>
+        <a href="#errores" class="block rounded px-4 py-2 hover:bg-gray-700">Log errores</a>
       </nav>
-
     </aside>
 
-    <!-- MAIN -->
     <main class="flex-1 space-y-12 p-8 md:ml-64">
 
-      <!-- TOPBAR -->
       <header class="flex items-center justify-between">
-
         <div>
-
-          <h1 class="text-4xl font-bold">
-            Panel de Administración
-          </h1>
-
-          <p class="text-gray-500 dark:text-gray-400">
-            Bienvenida, Itziar
-          </p>
-
+          <h1 class="text-4xl font-bold">Panel de Administración</h1>
+          <p class="text-gray-500 dark:text-gray-400">Bienvenida, Itziar</p>
         </div>
 
-        <button
-          id="themeToggle"
-          class="rounded-lg bg-gray-800 px-4 py-2 text-white dark:bg-white dark:text-black"
-        >
+        <button id="themeToggle" class="rounded-lg bg-gray-800 px-4 py-2 text-white dark:bg-white dark:text-black">
           Cambiar tema
         </button>
-
       </header>
 
-      <!-- DASHBOARD -->
       <section id="dashboard">
-
-        <h2 class="mb-6 text-3xl font-bold">
-          Dashboard
-        </h2>
+        <h2 class="mb-6 text-3xl font-bold">Dashboard</h2>
 
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4">
-
           <div class="rounded-xl border-l-4 border-blue-500 bg-white p-6 shadow dark:bg-gray-800">
             <p class="text-gray-500">💰 Ingresos totales</p>
             <h3 class="mt-2 text-3xl font-bold">48.250 €</h3>
@@ -130,18 +62,11 @@
             <p class="text-gray-500">⚠️ Agentes fallando</p>
             <h3 class="mt-2 text-3xl font-bold text-red-500">7</h3>
           </div>
-
         </div>
 
-        <!-- GRAFICO -->
         <div class="mt-8 rounded-xl bg-white p-6 shadow dark:bg-gray-800">
-
-          <h3 class="mb-6 text-xl font-bold">
-            Actividad semanal
-          </h3>
-
+          <h3 class="mb-6 text-xl font-bold">Actividad semanal</h3>
           <div class="flex h-56 items-end gap-4">
-
             <div class="h-20 w-full rounded-t bg-blue-500"></div>
             <div class="h-32 w-full rounded-t bg-blue-500"></div>
             <div class="h-44 w-full rounded-t bg-blue-500"></div>
@@ -149,25 +74,14 @@
             <div class="h-52 w-full rounded-t bg-blue-500"></div>
             <div class="h-36 w-full rounded-t bg-blue-500"></div>
             <div class="h-48 w-full rounded-t bg-blue-500"></div>
-
           </div>
-
         </div>
-
       </section>
 
-      <!-- USUARIOS -->
-      <section
-        id="usuarios"
-        class="overflow-x-auto rounded-xl bg-white p-6 shadow dark:bg-gray-800"
-      >
-
-        <h2 class="mb-6 text-3xl font-bold">
-          Gestión de usuarios
-        </h2>
+      <section id="usuarios" class="overflow-x-auto rounded-xl bg-white p-6 shadow dark:bg-gray-800">
+        <h2 class="mb-6 text-3xl font-bold">Gestión de usuarios</h2>
 
         <table class="w-full text-left">
-
           <thead>
             <tr class="border-b border-gray-300 dark:border-gray-700">
               <th class="p-3">Nombre</th>
@@ -179,580 +93,287 @@
           </thead>
 
           <tbody>
-
             <tr class="border-b dark:border-gray-700">
-
               <td class="p-3">Ana López</td>
               <td class="p-3">ana@empresa.com</td>
               <td class="p-3">Pro</td>
-
-              <td class="p-3">
-                <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">
-                  Activo
-                </span>
-              </td>
-
+              <td class="p-3"><span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Activo</span></td>
               <td class="relative p-3">
-
-                <button class="dropdown-btn text-xl">
-                  ⋮
-                </button>
-
+                <button class="dropdown-btn text-xl">⋮</button>
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
-
-                  <button
-                    onclick="openModal('Usuario: Ana López · Plan Pro · Empresa NovaTech · 3 agentes contratados')"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Ver detalle
-                  </button>
-
-                  <button
-                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Eliminar
-                  </button>
-
+                  <button onclick="openModal('Usuario: Ana López · Plan Pro · Empresa NovaTech')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Ver detalle</button>
+                  <button class="block px-4 py-2 text-red-500">Eliminar</button>
                 </div>
-
               </td>
-
             </tr>
 
             <tr class="border-b dark:border-gray-700">
-
               <td class="p-3">Carlos Pérez</td>
               <td class="p-3">carlos@startup.io</td>
               <td class="p-3">Business</td>
-
-              <td class="p-3">
-                <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">
-                  Activo
-                </span>
-              </td>
-
+              <td class="p-3"><span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Activo</span></td>
               <td class="relative p-3">
-
-                <button class="dropdown-btn text-xl">
-                  ⋮
-                </button>
-
+                <button class="dropdown-btn text-xl">⋮</button>
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
-
-                  <button
-                    onclick="openModal('Usuario: Carlos Pérez · Plan Business · Empresa BlueSoft')"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Ver detalle
-                  </button>
-
-                  <button
-                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Eliminar
-                  </button>
-
+                  <button onclick="openModal('Usuario: Carlos Pérez · Plan Business · Empresa BlueSoft')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Ver detalle</button>
+                  <button class="block px-4 py-2 text-red-500">Eliminar</button>
                 </div>
-
               </td>
-
             </tr>
 
             <tr class="border-b dark:border-gray-700">
-
               <td class="p-3">Lucía Martín</td>
               <td class="p-3">lucia@corp.com</td>
               <td class="p-3">Free</td>
-
-              <td class="p-3">
-                <span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-700">
-                  Pendiente
-                </span>
-              </td>
-
+              <td class="p-3"><span class="rounded-full bg-yellow-100 px-3 py-1 text-yellow-700">Pendiente</span></td>
               <td class="relative p-3">
-
-                <button class="dropdown-btn text-xl">
-                  ⋮
-                </button>
-
+                <button class="dropdown-btn text-xl">⋮</button>
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
-
-                  <button
-                    onclick="openModal('Usuario: Lucía Martín · Plan Free · Estado pendiente')"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Ver detalle
-                  </button>
-
-                  <button
-                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Eliminar
-                  </button>
-
+                  <button onclick="openModal('Usuario: Lucía Martín · Plan Free · Estado pendiente')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Ver detalle</button>
+                  <button class="block px-4 py-2 text-red-500">Eliminar</button>
                 </div>
-
               </td>
-
             </tr>
 
             <tr class="border-b dark:border-gray-700">
-
               <td class="p-3">Diego Ruiz</td>
               <td class="p-3">diego@agency.com</td>
               <td class="p-3">Pro</td>
-
-              <td class="p-3">
-                <span class="rounded-full bg-red-100 px-3 py-1 text-red-700">
-                  Suspendido
-                </span>
-              </td>
-
+              <td class="p-3"><span class="rounded-full bg-red-100 px-3 py-1 text-red-700">Suspendido</span></td>
               <td class="relative p-3">
-
-                <button class="dropdown-btn text-xl">
-                  ⋮
-                </button>
-
+                <button class="dropdown-btn text-xl">⋮</button>
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
-
-                  <button
-                    onclick="openModal('Usuario: Diego Ruiz · Cuenta suspendida')"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Ver detalle
-                  </button>
-
-                  <button
-                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Eliminar
-                  </button>
-
+                  <button onclick="openModal('Usuario: Diego Ruiz · Cuenta suspendida')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Ver detalle</button>
+                  <button class="block px-4 py-2 text-red-500">Eliminar</button>
                 </div>
-
               </td>
-
             </tr>
 
             <tr>
-
               <td class="p-3">Marta Gil</td>
               <td class="p-3">marta@tech.es</td>
               <td class="p-3">Enterprise</td>
-
-              <td class="p-3">
-                <span class="rounded-full bg-green-100 px-3 py-1 text-green-700">
-                  Activo
-                </span>
-              </td>
-
+              <td class="p-3"><span class="rounded-full bg-green-100 px-3 py-1 text-green-700">Activo</span></td>
               <td class="relative p-3">
-
-                <button class="dropdown-btn text-xl">
-                  ⋮
-                </button>
-
+                <button class="dropdown-btn text-xl">⋮</button>
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
-
-                  <button
-                    onclick="openModal('Usuario: Marta Gil · Enterprise · FinLab')"
-                    class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Ver detalle
-                  </button>
-
-                  <button
-                    class="block px-4 py-2 text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Eliminar
-                  </button>
-
+                  <button onclick="openModal('Usuario: Marta Gil · Enterprise · FinLab')" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600">Ver detalle</button>
+                  <button class="block px-4 py-2 text-red-500">Eliminar</button>
                 </div>
-
               </td>
-
             </tr>
-
           </tbody>
-
         </table>
-
       </section>
 
-      <!-- AGENTES -->
-      <section
-        id="agentes"
-        class="rounded-xl bg-white p-6 shadow dark:bg-gray-800"
-      >
-
-        <h2 class="mb-6 text-3xl font-bold">
-          Gestión de agentes
-        </h2>
+      <section id="agentes" class="rounded-xl bg-white p-6 shadow dark:bg-gray-800">
+        <h2 class="mb-6 text-3xl font-bold">Gestión de agentes</h2>
 
         <div class="space-y-4">
 
           <article class="rounded-lg border p-4 dark:border-gray-700">
-
             <div class="flex justify-between">
-
               <div>
-
-                <h3 class="text-xl font-bold">
-                  SalesBot
-                </h3>
-
-                <p>
-                  Ana López ·
-                  <span class="text-green-500">
-                    Activo
-                  </span>
-                </p>
-
+                <h3 class="text-xl font-bold">SalesBot</h3>
+                <p>Ana López · <span class="text-green-500">Activo</span></p>
               </div>
-
               <div class="relative">
-
-                <button
-                  class="dropdown-btn rounded bg-gray-200 px-3 py-1 text-black dark:bg-gray-700 dark:text-white"
-                >
-                  ⋮
-                </button>
-
+                <button class="dropdown-btn rounded bg-gray-200 px-3 py-1 text-black dark:bg-gray-700 dark:text-white">⋮</button>
                 <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
-
-                  <button
-                    onclick="openModal('Configurar SalesBot: prompt editable CRM.')"
-                    class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Configurar
-                  </button>
-
-                  <button
-                    class="block w-full px-4 py-2 text-left text-red-500 hover:bg-gray-100 dark:hover:bg-gray-600"
-                  >
-                    Eliminar
-                  </button>
-
+                  <button onclick="openModal('Configurar SalesBot: prompt editable CRM.')" class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600">Configurar</button>
+                  <button class="block w-full px-4 py-2 text-left text-red-500">Eliminar</button>
                 </div>
-
               </div>
-
             </div>
-
-            <button class="collapse-btn mt-4 text-blue-500">
-              Ver skills
-            </button>
-
-            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">
-              Navegación web, CRM, Calendario
-            </div>
-
+            <button class="collapse-btn mt-4 text-blue-500">Ver skills</button>
+            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">Navegación web, CRM, Calendario</div>
           </article>
 
           <article class="rounded-lg border p-4 dark:border-gray-700">
-
-            <h3 class="text-xl font-bold">
-              SupportAI
-            </h3>
-
-            <p>
-              Carlos Pérez ·
-              <span class="text-red-500">
-                Fallando
-              </span>
-            </p>
-
-            <button class="collapse-btn mt-4 text-blue-500">
-              Ver skills
-            </button>
-
-            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">
-              Chat soporte, PDFs, Base conocimiento
+            <div class="flex justify-between">
+              <div>
+                <h3 class="text-xl font-bold">SupportAI</h3>
+                <p>Carlos Pérez · <span class="text-red-500">Fallando</span></p>
+              </div>
+              <div class="relative">
+                <button class="dropdown-btn rounded bg-gray-200 px-3 py-1 text-black dark:bg-gray-700 dark:text-white">⋮</button>
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+                  <button onclick="openModal('Configurar SupportAI: soporte técnico IA.')" class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600">Configurar</button>
+                  <button class="block w-full px-4 py-2 text-left text-red-500">Eliminar</button>
+                </div>
+              </div>
             </div>
+            <button class="collapse-btn mt-4 text-blue-500">Ver skills</button>
+            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">PDFs, Base conocimiento, Chat soporte</div>
+          </article>
 
+          <article class="rounded-lg border p-4 dark:border-gray-700">
+            <div class="flex justify-between">
+              <div>
+                <h3 class="text-xl font-bold">FinanceBot</h3>
+                <p>Marta Gil · <span class="text-green-500">Activo</span></p>
+              </div>
+              <div class="relative">
+                <button class="dropdown-btn rounded bg-gray-200 px-3 py-1 text-black dark:bg-gray-700 dark:text-white">⋮</button>
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+                  <button onclick="openModal('Configurar FinanceBot: análisis financiero.')" class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600">Configurar</button>
+                  <button class="block w-full px-4 py-2 text-left text-red-500">Eliminar</button>
+                </div>
+              </div>
+            </div>
+            <button class="collapse-btn mt-4 text-blue-500">Ver skills</button>
+            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">Finanzas, Reportes, PDFs</div>
+          </article>
+
+          <article class="rounded-lg border p-4 dark:border-gray-700">
+            <div class="flex justify-between">
+              <div>
+                <h3 class="text-xl font-bold">HR Assistant</h3>
+                <p>Lucía Martín · <span class="text-yellow-500">Inactivo</span></p>
+              </div>
+              <div class="relative">
+                <button class="dropdown-btn rounded bg-gray-200 px-3 py-1 text-black dark:bg-gray-700 dark:text-white">⋮</button>
+                <div class="dropdown absolute right-0 z-10 hidden rounded bg-white p-2 shadow dark:bg-gray-700">
+                  <button onclick="openModal('Configurar HR Assistant: RRHH y calendario.')" class="block w-full px-4 py-2 text-left hover:bg-gray-100 dark:hover:bg-gray-600">Configurar</button>
+                  <button class="block w-full px-4 py-2 text-left text-red-500">Eliminar</button>
+                </div>
+              </div>
+            </div>
+            <button class="collapse-btn mt-4 text-blue-500">Ver skills</button>
+            <div class="collapse mt-3 hidden rounded bg-gray-100 p-3 dark:bg-gray-700">Calendario, Recursos Humanos</div>
           </article>
 
         </div>
-
       </section>
 
-      <!-- SKILLS -->
-      <section
-        id="skills"
-        class="rounded-xl bg-white p-6 shadow dark:bg-gray-800"
-      >
-
-        <h2 class="mb-4 text-3xl font-bold">
-          Skills
-        </h2>
-
-        <p class="mb-6 text-gray-500 dark:text-gray-400">
-          Una skill es una capacidad que puede adjuntarse a un agente IA.
-        </p>
+      <section id="skills" class="rounded-xl bg-white p-6 shadow dark:bg-gray-800">
+        <h2 class="mb-4 text-3xl font-bold">Skills</h2>
+        <p class="mb-6 text-gray-500 dark:text-gray-400">Una skill es una capacidad que puede adjuntarse a un agente IA.</p>
 
         <div class="grid gap-4 md:grid-cols-2">
-
           <div class="rounded-lg border p-4 dark:border-gray-700">
-
-            <h3 class="font-bold">
-              Navegación web
-            </h3>
-
-            <p>
-              Permite consultar páginas externas.
-            </p>
-
-            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">
-              12 agentes
-            </p>
-
+            <h3 class="font-bold">Navegación web</h3>
+            <p>Permite consultar páginas externas.</p>
+            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">12 agentes</p>
           </div>
 
           <div class="rounded-lg border p-4 dark:border-gray-700">
-
-            <h3 class="font-bold">
-              Lectura documentos
-            </h3>
-
-            <p>
-              Procesa PDFs y archivos.
-            </p>
-
-            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">
-              8 agentes
-            </p>
-
+            <h3 class="font-bold">Lectura documentos</h3>
+            <p>Procesa PDFs y archivos.</p>
+            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">8 agentes</p>
           </div>
 
+          <div class="rounded-lg border p-4 dark:border-gray-700">
+            <h3 class="font-bold">CRM</h3>
+            <p>Integración comercial y clientes.</p>
+            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">5 agentes</p>
+          </div>
+
+          <div class="rounded-lg border p-4 dark:border-gray-700">
+            <h3 class="font-bold">Calendario</h3>
+            <p>Gestión de reuniones y eventos.</p>
+            <p class="mt-2 inline-block rounded-full bg-blue-100 px-3 py-1 text-blue-700">7 agentes</p>
+          </div>
         </div>
-
       </section>
 
-      <!-- CONTRATOS -->
-      <section
-        id="contratos"
-        class="overflow-x-auto rounded-xl bg-white p-6 shadow dark:bg-gray-800"
-      >
-
-        <h2 class="mb-6 text-3xl font-bold">
-          Contrataciones
-        </h2>
+      <section id="contratos" class="overflow-x-auto rounded-xl bg-white p-6 shadow dark:bg-gray-800">
+        <h2 class="mb-6 text-3xl font-bold">Contrataciones</h2>
 
         <table class="w-full text-left">
-
           <thead>
-
             <tr class="border-b dark:border-gray-700">
-
               <th class="p-3">Cliente</th>
               <th class="p-3">Agente</th>
               <th class="p-3">Skills</th>
               <th class="p-3">Fechas</th>
               <th class="p-3">Importe</th>
-
             </tr>
-
           </thead>
 
           <tbody>
-
-            <tr>
-
-              <td class="p-3">NovaTech</td>
-              <td class="p-3">SalesBot</td>
-              <td class="p-3">CRM, Web</td>
-              <td class="p-3">01/05 - 31/05</td>
-              <td class="p-3">950 €</td>
-
-            </tr>
-
+            <tr><td class="p-3">NovaTech</td><td class="p-3">SalesBot</td><td class="p-3">CRM, Web</td><td class="p-3">01/05 - 31/05</td><td class="p-3">950 €</td></tr>
+            <tr><td class="p-3">BlueSoft</td><td class="p-3">SupportAI</td><td class="p-3">PDFs, Soporte</td><td class="p-3">03/05 - 30/05</td><td class="p-3">1.250 €</td></tr>
+            <tr><td class="p-3">FinLab</td><td class="p-3">FinanceBot</td><td class="p-3">Finanzas</td><td class="p-3">01/04 - 01/06</td><td class="p-3">2.100 €</td></tr>
+            <tr><td class="p-3">MarketPro</td><td class="p-3">HR Assistant</td><td class="p-3">Calendario</td><td class="p-3">10/05 - 10/06</td><td class="p-3">700 €</td></tr>
           </tbody>
-
         </table>
-
       </section>
 
-      <!-- ERRORES -->
-      <section
-        id="errores"
-        class="rounded-xl bg-white p-6 shadow dark:bg-gray-800"
-      >
-
-        <h2 class="mb-6 text-3xl font-bold">
-          Log de errores
-        </h2>
+      <section id="errores" class="rounded-xl bg-white p-6 shadow dark:bg-gray-800">
+        <h2 class="mb-6 text-3xl font-bold">Log de errores</h2>
 
         <div class="space-y-3">
-
-          <div class="rounded border p-4 dark:border-gray-700">
-
-            2026-05-14 · SupportAI ·
-
-            <span class="rounded bg-red-100 px-2 py-1 text-red-700">
-              Crítica
-            </span>
-
-            · Timeout API
-
-          </div>
-
-          <div class="rounded border p-4 dark:border-gray-700">
-
-            2026-05-13 · SalesBot ·
-
-            <span class="rounded bg-yellow-100 px-2 py-1 text-yellow-700">
-              Media
-            </span>
-
-            · Error CRM
-
-          </div>
-
+          <div class="rounded border p-4 dark:border-gray-700">2026-05-14 · SupportAI · <span class="rounded bg-red-100 px-2 py-1 text-red-700">Crítica</span> · Timeout API</div>
+          <div class="rounded border p-4 dark:border-gray-700">2026-05-13 · SalesBot · <span class="rounded bg-yellow-100 px-2 py-1 text-yellow-700">Media</span> · Error CRM</div>
+          <div class="rounded border p-4 dark:border-gray-700">2026-05-12 · FinanceBot · <span class="rounded bg-red-100 px-2 py-1 text-red-700">Crítica</span> · Error financiero</div>
+          <div class="rounded border p-4 dark:border-gray-700">2026-05-11 · HR Assistant · <span class="rounded bg-green-100 px-2 py-1 text-green-700">Baja</span> · Error calendario</div>
+          <div class="rounded border p-4 dark:border-gray-700">2026-05-10 · SupportAI · <span class="rounded bg-yellow-100 px-2 py-1 text-yellow-700">Media</span> · PDF corrupto</div>
+          <div class="rounded border p-4 dark:border-gray-700">2026-05-09 · SalesBot · <span class="rounded bg-red-100 px-2 py-1 text-red-700">Crítica</span> · Fallo servidor</div>
         </div>
-
       </section>
 
     </main>
-
   </div>
 
-  <!-- MODAL -->
-  <div
-    id="modal"
-    class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60 p-4"
-  >
-
+  <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-60 p-4">
     <div class="w-full max-w-lg rounded-xl bg-white p-6 dark:bg-gray-800">
-
       <div class="mb-4 flex items-center justify-between">
-
-        <h2 class="text-2xl font-bold">
-          Detalle
-        </h2>
-
-        <button
-          onclick="closeModal()"
-          class="text-2xl"
-        >
-          ×
-        </button>
-
+        <h2 class="text-2xl font-bold">Detalle</h2>
+        <button onclick="closeModal()" class="text-2xl">×</button>
       </div>
 
       <p id="modalText" class="mb-6"></p>
 
-      <textarea
-        class="mb-4 w-full rounded bg-gray-100 p-3 dark:bg-gray-700"
-      >
-Prompt editable del agente...
-      </textarea>
+      <textarea class="mb-4 w-full rounded bg-gray-100 p-3 dark:bg-gray-700">Prompt editable del agente...</textarea>
 
-      <button
-        onclick="closeModal()"
-        class="rounded bg-blue-600 px-4 py-2 text-white"
-      >
-        Cerrar
-      </button>
-
+      <button onclick="closeModal()" class="rounded bg-blue-600 px-4 py-2 text-white">Cerrar</button>
     </div>
-
   </div>
 
-  <!-- SCRIPT -->
   <script>
-
-    // DARK MODE
-    document
-      .getElementById("themeToggle")
-      .addEventListener("click", () => {
-        document.documentElement.classList.toggle("dark");
-      });
-
-    // DROPDOWNS
-    document
-      .querySelectorAll(".dropdown-btn")
-      .forEach((button) => {
-
-        button.addEventListener("click", (event) => {
-
-          event.stopPropagation();
-
-          document
-            .querySelectorAll(".dropdown")
-            .forEach((menu) => {
-              menu.classList.add("hidden");
-            });
-
-          button.nextElementSibling.classList.toggle("hidden");
-
-        });
-
-      });
-
-    document.addEventListener("click", () => {
-
-      document
-        .querySelectorAll(".dropdown")
-        .forEach((menu) => {
-          menu.classList.add("hidden");
-        });
-
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
     });
 
-    // COLLAPSE
-    document
-      .querySelectorAll(".collapse-btn")
-      .forEach((button) => {
-
-        button.addEventListener("click", () => {
-          button.nextElementSibling.classList.toggle("hidden");
-        });
-
+    document.querySelectorAll(".dropdown-btn").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        event.stopPropagation();
+        document.querySelectorAll(".dropdown").forEach((menu) => menu.classList.add("hidden"));
+        button.nextElementSibling.classList.toggle("hidden");
       });
+    });
 
-    // MODAL
+    document.addEventListener("click", () => {
+      document.querySelectorAll(".dropdown").forEach((menu) => menu.classList.add("hidden"));
+    });
+
+    document.querySelectorAll(".collapse-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        button.nextElementSibling.classList.toggle("hidden");
+      });
+    });
+
     function openModal(text) {
-
       document.getElementById("modalText").textContent = text;
-
       const modal = document.getElementById("modal");
-
       modal.classList.remove("hidden");
       modal.classList.add("flex");
-
     }
 
     function closeModal() {
-
       const modal = document.getElementById("modal");
-
       modal.classList.add("hidden");
       modal.classList.remove("flex");
-
     }
 
-    document
-      .getElementById("modal")
-      .addEventListener("click", (event) => {
-
-        if (event.target.id === "modal") {
-          closeModal();
-        }
-
-      });
-
-    // ESC
-    document.addEventListener("keydown", (event) => {
-
-      if (event.key === "Escape") {
-        closeModal();
-      }
-
+    document.getElementById("modal").addEventListener("click", (event) => {
+      if (event.target.id === "modal") closeModal();
     });
 
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeModal();
+    });
   </script>
-
 </body>
 </html>
